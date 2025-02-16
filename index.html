@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">Smart Expense Tracker</div>
+                <div class="current-datetime" id="currentDateTime">
+                    Loading...
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch">
+                    <label for="theme-switch">Dark Mode</label>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="dashboard">
+                <div class="overview-cards">
+                    <div class="card income">
+                        <h3>Money In</h3>
+                        <p id="totalIncome">$0</p>
+                    </div>
+                    <div class="card expenses">
+                        <h3>Money Out</h3>
+                        <p id="totalExpenses">$0</p>
+                    </div>
+                    <div class="card balance">
+                        <h3>Money Left</h3>
+                        <p id="balance">$0</p>
+                    </div>
+                </div>
+
+                <div class="charts-container">
+                    <div class="chart">
+                        <canvas id="monthlyChart"></canvas>
+                    </div>
+                    <div class="chart">
+                        <canvas id="expenseChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="export-section">
+                    <button id="exportData" class="export-button">
+                        Save Your Data
+                    </button>
+                    <p class="export-tip">Keep your data safe by saving it to your computer</p>
+                    
+                    <div class="clear-data-section">
+                        <button id="clearData" class="clear-button">
+                            Clear All Data
+                        </button>
+                        <p class="clear-tip">Warning: This will delete all your data and start fresh</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Add Money Form Section -->
+            <section id="transaction-section" class="transaction-section">
+                <h2>Add Money</h2>
+                <form id="transactionForm">
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <select id="type" required>
+                            <option value="income">Money In</option>
+                            <option value="expense">Money Out</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">How Much?</label>
+                        <input type="number" id="amount" required min="0" step="0.01" placeholder="Enter amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">What For?</label>
+                        <select id="category" required>
+                            <option value="">Pick a Category</option>
+                            <!-- Categories will be added by JavaScript -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">When?</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Notes (optional)</label>
+                        <input type="text" id="description" placeholder="Add some notes">
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label for="recurring">
+                            <input type="checkbox" id="recurring">
+                            Happens Every Month?
+                        </label>
+                    </div>
+                    <button type="submit">Add</button>
+                </form>
+            </section>
+
+            <!-- Monthly Limit Section -->
+            <section id="budget-section" class="budget-section">
+                <h2>Set Monthly Limit</h2>
+                <form id="budgetForm">
+                    <div class="form-group">
+                        <label for="monthlyBudget">How much can you spend each month?</label>
+                        <input type="number" id="monthlyBudget" min="0" step="0.01" placeholder="Enter your monthly limit">
+                    </div>
+                    <button type="submit">Save Limit</button>
+                </form>
+            </section>
+
+            <!-- Savings Target Section -->
+            <section id="savings-section" class="savings-section">
+                <h2>Save Money</h2>
+                <form id="savingsForm">
+                    <div class="form-group">
+                        <label for="savingsGoal">How much do you want to save?</label>
+                        <input type="number" id="savingsGoal" min="0" step="0.01" placeholder="Enter target amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="savingsDescription">What are you saving for?</label>
+                        <input type="text" id="savingsDescription" placeholder="e.g., New Phone, Holiday">
+                    </div>
+                    <button type="submit">Start Saving</button>
+                </form>
+                <div class="savings-progress">
+                    <div class="progress-bar">
+                        <div class="progress" id="savingsProgress"></div>
+                    </div>
+                    <p id="savingsStatus">Start saving!</p>
+                </div>
+            </section>
+
+            <!-- Recent Activity Section -->
+            <section id="transactions-list" class="transactions-list">
+                <h2>Recent Activity</h2>
+                <div class="transactions-container">
+                    <!-- Transactions will be added by JavaScript -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Smart Expense Tracker 2025 Powered by:  Omkar Bhandalkar</p>
+            <div class="api-credits">
+               
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="charts.js"></script>
+</body>
+</html>
