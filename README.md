@@ -28,7 +28,6 @@
 - 🌓 **Dark Mode Toggle**
   - Clean light/dark mode theme switcher for late-night budgeting.
 
----
 
 ## 🛠️ Tech Stack
 
@@ -36,7 +35,7 @@
 - **Data Visualization**: Chart.js v4
 - **Persistence**: Web Storage API (LocalStorage)
 
----
+
 
 ## 🚀 Getting Started
 
@@ -49,7 +48,6 @@
 2. **Launch Application**:
    Simply open `index.html` in any modern web browser or serve via Live Server.
 
----
 
 ## 📄 License
 
