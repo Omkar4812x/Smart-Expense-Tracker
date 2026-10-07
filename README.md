@@ -1,10 +1,10 @@
 # 💰 Smart Expense Tracker
 
-> **Comprehensive personal finance dashboard for tracking income, expenses, monthly budgets, and savings goals with interactive Chart.js analytics.**
+> **Comprehensive personal finance dashboard for tracking income, expenses, monthly budgets, and savings goals with interactive Chart.js analytics. by Omkar bhandalkar**
 
 ---
 
-## ✨ Key Features
+## ✨ Key Features :
 
 - 📈 **Financial Dashboard Overview**
   - Instant summary cards displaying **Money In** (Total Income), **Money Out** (Total Expenses), and **Money Left** (Net Balance).
@@ -29,7 +29,7 @@
   - Clean light/dark mode theme switcher for late-night budgeting.
 
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack :
 
 - **Frontend**: HTML5, Vanilla JavaScript (ES6+), CSS3 (Flexbox/Grid, CSS Variables)
 - **Data Visualization**: Chart.js v4
@@ -39,13 +39,13 @@
 
 ## 🚀 Getting Started
 
-1. **Clone the repository**:
+1. **Clone the repository** :
    ```bash
    git clone https://github.com/Omkar4812x/Expense-Tracker-Website.git
    cd Expense-Tracker-Website
    ```
 
-2. **Launch Application**:
+2. **Launch Application** :
    Simply open `index.html` in any modern web browser or serve via Live Server.
 
 
